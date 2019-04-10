@@ -14,14 +14,10 @@ import java.util.Map;
 
 public enum Animal {
 	Elephant, Lion, Ours;
-	private static Map<Character,Animal> c2a;
-	static  {
-		c2a = new HashMap<>();
-		for(Animal a : Animal.values())
-			c2a.put(a.name().charAt(0), a);
-	}
 	public static Animal getAnimal(char c) {
-		assert c2a.containsKey(c);
-		return c2a.get(c);
+		for(Animal a : Animal.values())
+			if (a.name().charAt(0) == c)
+				return a;
+		throw new IllegalArgumentException();
 	}
 }
