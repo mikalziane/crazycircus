@@ -30,10 +30,12 @@ public class Pile {
 	}
 	// l'animal du bas passe au sommet (MA et NI)
 	public void remonter() {
+		assert !animaux.isEmpty();
 		animaux.addLast(animaux.removeFirst());
 	}
 	// oter l'animal du haut (KI LO)
  	public Animal dépiler() {
+ 		assert !animaux.isEmpty();
  		Animal a = animaux.getLast();
  		animaux.removeLast();
  		return a;

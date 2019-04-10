@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class AnimalTest {
-
 	@Test
 	void test() {
 		assertEquals(Animal.Elephant, Animal.getAnimal('E'));
